@@ -32,8 +32,9 @@ namespace apportionment
             while (count <= totalSeats) //still 1-indexed
             {
                 stateList = stateList.OrderByDescending(x=>priority(x));
-                seats[stateList.First()] += 1;
-                log(count,stateList.First());
+                string current = stateList.First();
+                seats[current] += 1;
+                log(count,current);
                 count++;
             }
             //Write final seats
@@ -44,8 +45,9 @@ namespace apportionment
             for (int i = 0; i < 10; i++)
             {
                 stateList = stateList.OrderByDescending(x=>priority(x));
-                seats[stateList.First()] += 1;
-                log(count,stateList.First());
+                string current = stateList.First();
+                seats[current] += 1;
+                log(count,current);
                 count++;
             }
 
