@@ -39,6 +39,7 @@ namespace apportionment
             //Write final seats
             File.WriteAllLines("./seats.csv",seats.OrderByDescending(x=>x.Value).Select(x=>$"{x.Key},{x.Value}"));
             Console.WriteLine("----------------------------------------------");
+            forFile.Add("");
             //Compute what would have been the next 10 allocations
             for (int i = 0; i < 10; i++)
             {
